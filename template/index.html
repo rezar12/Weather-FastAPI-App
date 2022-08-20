@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="boxcontent">
+            <div class="box bottom">
+                <div class="content">
+                    <h1>côte d'ivoire</h1>
+                    <form action="/obt" method="POST">
+                        <select id="monselect" style="width:auto;" class="dropdown" name="ville" required placeholder="VILLE"
+                            onclick="GFG_Fun();">
+                            <option value="">choix de la ville </option>
+                        </select>
+                        <input style="cursor:pointer;" type="submit" value="voir" class="btn">
+                    </form>
+                    <svg style="fill: #fff; position:absolute; top:50%; right:-45px; transform:translateY(2px) scale(1.5); " xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="m24 30.75-12-12 2.15-2.15L24 26.5l9.85-9.85L36 18.8Z"/></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var up = document.getElementById('geeks');
+    var down = document.getElementById('gfg');
+    var select = document.getElementById("monselect");
+    var elmts = ['Abidjan', 'Bouaké', 'Daloa', 'Yamoussoukro', 'San-Pédro', 'Divo', 'Korhogo', 'Anyama', 'Abengourou', 'Man', 'Gagnoa', 'Soubré', 'Agboville', 'Dabou', 'Grand-Bassam', 'Bouaflé', 'Issia', 'Sinfra', 'Katiola', 'Bingerville', 'Adzopé', 'Séguéla', 'Bondoukou', 'Oumé', 'Ferkessedougou', 'Dimbokro', 'Odienné', 'Duékoué', 'Danané', 'Tingréla', 'Guiglo', 'Boundiali', 'Agnibilékrou', 'Daoukro', 'Vavoua', 'Zuénoula', 'Tiassalé', 'Toumodi', 'Akoupé', 'Lakota']
+
+    up.innerHTML = "Click on the button to "
+        + "perform the operation" +
+        ".<br>Array - [" + elmts + "]";
+
+    // Main function
+    function GFG_Fun() {
+        for (var i = 0; i < elmts.length; i++) {
+            var optn = elmts[i];
+            var el = document.createElement("option");
+            el.textContent = optn;
+            el.value = optn;
+            select.appendChild(el);
+        }
+        down.innerHTML = "Elements Added";
+    }
+        //
+</script>
+
+</html>

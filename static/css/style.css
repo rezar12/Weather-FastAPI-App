@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2? family = Be + Vietnam: wght @ 100; 300; 800 & family = Poppins: wght @ 100; 200; 300; 500; 700; 900 & display = swap ");
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 2rem 6rem;
+  background-color: #252525;
+  color: #fff;
+  perspective: 500px;
+}
+
+.container .boxcontent {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: repeat(1fr);
+}
+
+.container .boxcontent .box {
+  position: relative;
+}
+
+.container .boxcontent .top ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.container .boxcontent .top ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .boxcontent .top ul li span {
+  color: white;
+  margin-left: 1rem;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.container .boxcontent .top ul li .toggle .boxcorner {
+  width: 48px;
+  height: 17px;
+  background-color: #FFFBFB;
+  border-radius: 34px;
+  position: relative;
+  cursor: pointer;
+}
+
+.container .boxcontent .top ul li .toggle .boxcorner .circle {
+  width: 30px;
+  height: 30px;
+  background-color: grey;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+}
+
+.container .boxcontent .bottom {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.bottom .content{
+  padding-top: 4rem;
+  padding-left: 2rem;
+  justify-self: flex-start;
+  position: relative;
+  
+
+}
+.bottom .content h1:nth-child(1){
+  letter-spacing: 15px;
+
+  font-weight: 400;
+  margin: 1rem 0rem;
+
+}
+.bottom .content h1{
+  text-transform: uppercase;
+}
+.bottom .content .dropdown{
+  -webkit-appearance: none;
+  background: transparent;
+  padding: 5px; 
+  border: none;
+  font-size: 58px;
+  text-transform: uppercase;
+  color: white;
+  outline: none;
+  margin: 1rem 0rem;
+  letter-spacing: 15px;
+  
+
+}
+.dropdown option{
+  background-color: #252525;
+}
+.dropdown:hover option{
+  border: none;
+}
+.bottom .content h1:nth-child(1)::after{
+  content: '';
+  position: absolute;
+  top:85px;
+  left: 428px;
+  transform: translate(32px,-50px) ;
+  color:#fff;
+  width: 100px;
+  height:100px;
+  background-image: url(img/icon1.svg);
+  background-repeat: no-repeat;
+  background-size: 44px;
+}
+.bottom .content .date{
+  text-transform: capitalize;
+  font-weight: 100;
+  word-spacing: 8px;
+  letter-spacing: 5px;
+  margin-top: 26px;
+}
+
+.bottom .beautyUi{
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 200px;
+}
+
+.bottom .beautyUi .spin{
+  position: absolute;
+  z-index: 1;
+}
+
+.bottom .beautyUi .spin::after{
+  content: '-40°';
+  position: absolute;
+  bottom: 23px;
+  right: 175px;
+  z-index: 1;
+}
+
+.bottom .beautyUi .spin::before{
+  content: '100°';
+  position: absolute;
+  right: -40px;
+  top: 85px;
+  z-index: 1;
+}
+.bottom .beautyUi .temperature{
+  position: absolute;
+  z-index: 5;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+}
+
+.bottom .beautyUi .temperature h1{
+  font-size: 128px;
+  font-weight: 100;
+}
+.bottom .beautyUi .temperature::after{
+  content: '';
+  position: absolute;
+  z-index: 5;
+  background-size: 65px;
+  width: 65px;
+  height: 100%;
+  transform: translate(-9px,-57px);
+  left: 110%;
+  top: 5%;
+  background-image: url(img/termo.svg);
+  background-repeat:no-repeat;
+}
+
+.bottom .content .conclusion{
+  margin-top: 4rem;
+}
+
+.bottom .content .conclusion .conc{
+  display: flex;
+  align-items: center;
+}
+
+.bottom .content .conclusion .conc p{
+  margin-right: 1rem;
+}
+
+.content .btn{
+  width: 58px;
+  height: 58px;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  border: 2px solid white;
+  background-color: transparent;
+  outline: none;
+  margin-top: 2rem;
+  float: left;
+  
+}
+
+.conclusion .repport{
+  display: flex;
+  align-items: center;
+  margin-top: -12px;
+}
+
+.conclusion .repport h2{
+  text-transform: capitalize;
+  font-weight: 400;
+  margin-right: .6rem;
+  transform: translateY(6.2px);
+}
+
+.conclusion .repport img{
+  width:75px;
+  height:75px;
+}
+
+.ville{
+  font-size: 65px;
+  letter-spacing: 16px;
+  margin-top: 26px;
+  font-weight: 600;
+}
+
+a{
+  display: flex;
+  align-items: center;
+  transform: scale(.8);
+  position: relative;
+  text-decoration: none;
+
+}
+
+a svg,a h3{
+  transform: translateX(-104px);
+  color: #fff;
+}
+a svg{
+  animation: goto .5s ease-in-out alternate-reverse backwards infinite ;
+}
+@keyframes goto {
+  100%{
+    transform: translateX(-114px) scale(1);
+    animation-delay: .1s;
+  }
+  
+}
+
+.circle1{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-style: preserve-3d;
+  transform: translate(-50%,-50%);
+}
+.circle1::after{
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: rgb(255, 255, 255);
+  border: none;
+  border-radius: 100%;
+  transform-style: preserve-3d;
+  animation: rot2 5s ease-in-out infinite reverse  forwards;
+}
+@keyframes rot2 {
+  0%{
+      transform: scale(.2)  rotateZ(0deg) translateY(580px) ;
+  }
+
+  100%{
+      
+      transform: scale(.2)   rotateZ(360deg) translateY(580px);
+  }
+ 
+  
+}
+svg .icon-dropdown{
+  position:absolute;
+  fill: white;
+  top:50%;
+  right:-40px;
+  transform: scale(1.5) translateY(2px);
+}
